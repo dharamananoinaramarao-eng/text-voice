@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Programming Basics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            color: #38bdf8;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .lesson {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        h3 {
+            color: #374151;
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 15px;
+        }
+
+        .output {
+            color: #22c55e;
+        }
+
+        .note {
+            background: #dbeafe;
+            padding: 15px;
+            border-left: 5px solid #2563eb;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>C Programming Basics</h1>
+
+        <p>
+            Learn Syntax, Program Structure and Your First C Program
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- SECTION 1 -->
+
+        <div class="lesson">
+
+            <h2>1. Learn C Syntax</h2>
+
+            <p>
+                Syntax means the rules that we follow when
+                writing a C program.
+            </p>
+
+            <p>
+                Just like English has grammar rules,
+                C programming has syntax rules.
+            </p>
+
+            <h3>Basic C Syntax</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+
+    printf("Hello World");
+
+    return 0;
+}</pre>
+
+
+            <h3>Important Syntax Rules</h3>
+
+            <p>
+                <b>1. Statements usually end with ;</b>
+            </p>
+
+            <pre>
+printf("Hello");
+int age = 19;</pre>
+
+
+            <p>
+                <b>2. C is case-sensitive.</b>
+            </p>
+
+            <pre>
+printf("Hello");   // Correct
+
+Printf("Hello");   // Different
+</pre>
+
+
+            <p>
+                <b>3. Code blocks use { }.</b>
+            </p>
+
+            <pre>
+if (age &gt;= 18) {
+
+    printf("Adult");
+
+}</pre>
+
+
+            <p>
+                <b>4. Text is written inside double quotes.</b>
+            </p>
+
+            <pre>
+printf("Hello World");</pre>
+
+
+            <div class="note">
+
+                <b>Remember:</b>
+
+                <p>
+                    C programs are written using a specific
+                    syntax. If the syntax is incorrect,
+                    the compiler may show an error.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SECTION 2 -->
+
+        <div class="lesson">
+
+            <h2>2. C Program Structure</h2>
+
+            <p>
+                A C program has different parts.
+                Understanding these parts makes it easier
+                to write programs.
+            </p>
+
+
+            <h3>Example Structure</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+
+    printf("Hello World");
+
+    return 0;
+}</pre>
+
+
+            <h3>1. Header File</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;</pre>
+
+            <p>
+                This includes the Standard Input/Output
+                library. It allows us to use functions such
+                as <b>printf()</b> and <b>scanf()</b>.
+            </p>
+
+
+            <h3>2. Main Function</h3>
+
+            <pre>
+int main()
+{
+    // program code
+}</pre>
+
+            <p>
+                The <b>main()</b> function is where execution
+                of a C program begins.
+            </p>
+
+
+            <h3>3. Curly Brackets</h3>
+
+            <pre>
+{
+    // statements
+}</pre>
+
+            <p>
+                Curly brackets define the beginning and end
+                of a block of code.
+            </p>
+
+
+            <h3>4. Statement</h3>
+
+            <pre>
+printf("Hello World");</pre>
+
+            <p>
+                This statement tells the computer to display
+                text.
+            </p>
+
+
+            <h3>5. Return Statement</h3>
+
+            <pre>
+return 0;</pre>
+
+            <p>
+                It indicates that the main function has
+                finished successfully.
+            </p>
+
+        </div>
+
+
+
+        <!-- SECTION 3 -->
+
+        <div class="lesson">
+
+            <h2>3. Your First C Program</h2>
+
+            <p>
+                Let's create your first C program.
+            </p>
+
+
+            <h3>Step 1 — Write the Code</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+
+    printf("Hello World");
+
+    return 0;
+}</pre>
+
+
+            <h3>Step 2 — Understand the Code</h3>
+
+            <p>
+                <b>#include &lt;stdio.h&gt;</b>
+                → Includes the standard input/output library.
+            </p>
+
+            <p>
+                <b>int main()</b>
+                → Starting point of the program.
+            </p>
+
+            <p>
+                <b>printf()</b>
+                → Displays text on the screen.
+            </p>
+
+            <p>
+                <b>return 0;</b>
+                → Ends the program successfully.
+            </p>
+
+
+            <h3>Step 3 — Output</h3>
+
+            <pre class="output">
+Hello World</pre>
+
+
+            <div class="note">
+
+                <b>Beginner Practice:</b>
+
+                <p>
+                    Change "Hello World" to:
+                </p>
+
+                <pre>
+Welcome to C Programming!</pre>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

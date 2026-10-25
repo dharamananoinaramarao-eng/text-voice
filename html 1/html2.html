@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Programming - Operators</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            color: #38bdf8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .lesson {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            margin-top: 22px;
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        p {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .output {
+            color: #22c55e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        .note {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>C Programming Operators</h1>
+
+        <p>
+            Learn how operators are used in C
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="lesson">
+
+            <h2>1. What is an Operator?</h2>
+
+            <p>
+                An operator is a symbol that tells C to
+                perform an operation on one or more values.
+            </p>
+
+            <pre>
+int a = 10;
+int b = 5;
+
+int result = a + b;</pre>
+
+            <p>
+                Here, <b>+</b> is the operator.
+            </p>
+
+        </div>
+
+
+        <!-- ARITHMETIC -->
+
+        <div class="lesson">
+
+            <h2>2. Arithmetic Operators</h2>
+
+            <p>
+                Arithmetic operators are used for
+                mathematical calculations.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                    <td>10 + 5</td>
+                </tr>
+
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                    <td>10 - 5</td>
+                </tr>
+
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                    <td>10 * 5</td>
+                </tr>
+
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                    <td>10 / 5</td>
+                </tr>
+
+                <tr>
+                    <td>%</td>
+                    <td>Remainder</td>
+                    <td>10 % 3</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+
+    int a = 10;
+    int b = 3;
+
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %d\n", a / b);
+    printf("Remainder = %d\n", a % b);
+
+    return 0;
+}</pre>
+
+
+            <h3>Output</h3>
+
+            <pre class="output">Addition = 13
+Subtraction = 7
+Multiplication = 30
+Division = 3
+Remainder = 1</pre>
+
+        </div>
+
+
+        <!-- RELATIONAL -->
+
+        <div class="lesson">
+
+            <h2>3. Relational Operators</h2>
+
+            <p>
+                Relational operators compare two values.
+                They return <b>1</b> for true and <b>0</b>
+                for false.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>==</td>
+                    <td>Equal to</td>
+                </tr>
+
+                <tr>
+                    <td>!=</td>
+                    <td>Not equal to</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater than</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less than</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Greater than or equal</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Less than or equal</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <pre>
+int a = 10;
+int b = 5;
+
+printf("%d", a &gt; b);</pre>
+
+
+            <h3>Output</h3>
+
+            <pre class="output">1</pre>
+
+        </div>
+
+
+        <!-- LOGICAL -->
+
+        <div class="lesson">
+
+            <h2>4. Logical Operators</h2>
+
+            <p>
+                Logical operators are used to combine
+                conditions.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>&amp;&amp;</td>
+                    <td>AND</td>
+                </tr>
+
+                <tr>
+                    <td>||</td>
+                    <td>OR</td>
+                </tr>
+
+                <tr>
+                    <td>!</td>
+                    <td>NOT</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <pre>
+int age = 20;
+
+if (age &gt;= 18 &amp;&amp; age &lt;= 60) {
+
+    printf("Eligible");
+
+}</pre>
+
+        </div>
+
+
+        <!-- ASSIGNMENT -->
+
+        <div class="lesson">
+
+            <h2>5. Assignment Operators</h2>
+
+            <p>
+                Assignment operators are used to assign
+                or update values.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>=</td>
+                    <td>a = 10</td>
+                    <td>Assign</td>
+                </tr>
+
+                <tr>
+                    <td>+=</td>
+                    <td>a += 5</td>
+                    <td>a = a + 5</td>
+                </tr>
+
+                <tr>
+                    <td>-=</td>
+                    <td>a -= 5</td>
+                    <td>a = a - 5</td>
+                </tr>
+
+                <tr>
+                    <td>*=</td>
+                    <td>a *= 5</td>
+                    <td>a = a * 5</td>
+                </tr>
+
+                <tr>
+                    <td>/=</td>
+                    <td>a /= 5</td>
+                    <td>a = a / 5</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- INCREMENT -->
+
+        <div class="lesson">
+
+            <h2>6. Increment and Decrement</h2>
+
+            <p>
+                <b>++</b> increases a value by 1.
+            </p>
+
+            <p>
+                <b>--</b> decreases a value by 1.
+            </p>
+
+            <pre>
+int a = 10;
+
+a++;
+
+printf("%d", a);</pre>
+
+            <h3>Output</h3>
+
+            <pre class="output">11</pre>
+
+        </div>
+
+
+        <!-- CONDITIONAL -->
+
+        <div class="lesson">
+
+            <h2>7. Conditional Operator</h2>
+
+            <p>
+                The conditional operator is also called
+                the ternary operator.
+            </p>
+
+            <p>
+                It uses:
+            </p>
+
+            <pre>
+condition ? value_if_true : value_if_false;</pre>
+
+
+            <h3>Example</h3>
+
+            <pre>
+int age = 20;
+
+char *result =
+    (age &gt;= 18) ? "Adult" : "Minor";
+
+printf("%s", result);</pre>
+
+
+            <h3>Output</h3>
+
+            <pre class="output">Adult</pre>
+
+        </div>
+
+
+        <!-- PRACTICE -->
+
+        <div class="lesson">
+
+            <h2>8. Practice Questions</h2>
+
+            <ol>
+
+                <li>
+                    Write a program to add two numbers.
+                </li>
+
+                <li>
+                    Write a program to find the remainder
+                    of two numbers.
+                </li>
+
+                <li>
+                    Check whether two numbers are equal.
+                </li>
+
+                <li>
+                    Check whether a person is eligible
+                    based on age.
+                </li>
+
+                <li>
+                    Use the ternary operator to find the
+                    larger of two numbers.
+                </li>
+
+            </ol>
+
+            <div class="note">
+
+                <b>Tip:</b>
+                Practice each operator by changing the
+                values and running the program.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

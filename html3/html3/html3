@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Programming - Variables</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .lesson {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: Consolas, monospace;
+        }
+
+        .output {
+            color: #22c55e;
+        }
+
+        .note {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Variables in C</h1>
+
+    <p>Learn how to store and use data in C programming</p>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- WHAT IS A VARIABLE -->
+
+    <section class="lesson">
+
+        <h2>1. What is a Variable?</h2>
+
+        <p>
+            A variable is a named storage location used
+            to store a value in a C program.
+        </p>
+
+        <p>
+            Think of a variable as a box that can hold
+            information.
+        </p>
+
+        <pre>int age = 19;</pre>
+
+        <p>Here:</p>
+
+        <ul>
+            <li><strong>int</strong> → data type</li>
+            <li><strong>age</strong> → variable name</li>
+            <li><strong>19</strong> → value</li>
+        </ul>
+
+    </section>
+
+
+    <!-- DECLARATION -->
+
+    <section class="lesson">
+
+        <h2>2. Variable Declaration</h2>
+
+        <p>
+            Declaration means creating a variable by
+            specifying its data type and name.
+        </p>
+
+        <pre>int age;</pre>
+
+        <p>
+            This creates an integer variable named
+            <strong>age</strong>.
+        </p>
+
+    </section>
+
+
+    <!-- INITIALIZATION -->
+
+    <section class="lesson">
+
+        <h2>3. Variable Initialization</h2>
+
+        <p>
+            Initialization means assigning a value to
+            a variable when it is created.
+        </p>
+
+        <pre>int age = 19;</pre>
+
+        <p>
+            Now the variable <strong>age</strong> contains
+            the value <strong>19</strong>.
+        </p>
+
+    </section>
+
+
+    <!-- DATA TYPES -->
+
+    <section class="lesson">
+
+        <h2>4. Variables and Data Types</h2>
+
+        <p>
+            A data type tells C what kind of data a
+            variable can store.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Data Type</th>
+                <th>Example</th>
+                <th>Used For</th>
+            </tr>
+
+            <tr>
+                <td>int</td>
+                <td>19</td>
+                <td>Whole numbers</td>
+            </tr>
+
+            <tr>
+                <td>float</td>
+                <td>85.5</td>
+                <td>Decimal numbers</td>
+            </tr>
+
+            <tr>
+                <td>double</td>
+                <td>85.5555</td>
+                <td>Precise decimal numbers</td>
+            </tr>
+
+            <tr>
+                <td>char</td>
+                <td>'A'</td>
+                <td>Single character</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- EXAMPLE -->
+
+    <section class="lesson">
+
+        <h2>5. Variable Example Program</h2>
+
+        <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 19;
+    float marks = 85.5;
+    char grade = 'A';
+
+    printf("Age = %d\n", age);
+    printf("Marks = %.2f\n", marks);
+    printf("Grade = %c\n", grade);
+
+    return 0;
+}</pre>
+
+        <h3>Output</h3>
+
+        <pre class="output">Age = 19
+Marks = 85.50
+Grade = A</pre>
+
+    </section>
+
+
+    <!-- CHANGING VALUE -->
+
+    <section class="lesson">
+
+        <h2>6. Changing a Variable</h2>
+
+        <p>
+            You can change the value stored in a variable.
+        </p>
+
+        <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 19;
+
+    printf("Before = %d\n", age);
+
+    age = 20;
+
+    printf("After = %d\n", age);
+
+    return 0;
+}</pre>
+
+        <h3>Output</h3>
+
+        <pre class="output">Before = 19
+After = 20</pre>
+
+    </section>
+
+
+    <!-- NAMING RULES -->
+
+    <section class="lesson">
+
+        <h2>7. Variable Naming Rules</h2>
+
+        <ul>
+
+            <li>Variable names can contain letters.</li>
+
+            <li>Numbers can be used, but a variable
+                cannot start with a number.</li>
+
+            <li>Underscore <strong>_</strong> can be used.</li>
+
+            <li>C variable names are case-sensitive.</li>
+
+            <li>Spaces are not allowed in variable names.</li>
+
+            <li>C keywords cannot be used as variable names.</li>
+
+        </ul>
+
+        <h3>Correct</h3>
+
+        <pre>int age;
+int studentAge;
+int student_age;
+int marks1;</pre>
+
+        <h3>Incorrect</h3>
+
+        <pre>int 1age;
+int student age;
+int int;</pre>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+
+    <section class="lesson">
+
+        <h2>8. Practice</h2>
+
+        <p>
+            Create variables to store:
+        </p>
+
+        <ol>
+            <li>Your age</li>
+            <li>Your marks</li>
+            <li>Your grade</li>
+        </ol>
+
+        <p>
+            Then use <strong>printf()</strong> to display
+            the values.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>C Programming Tutorial • Variables</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Programming Tutorial</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 65px;
+            background: #111827;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #dbeafe;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            background: #38bdf8;
+            color: #07111f;
+
+            padding: 13px 25px;
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #1d4ed8;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* TUTORIAL */
+
+        .tutorial {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .tutorial h2 {
+            margin-bottom: 15px;
+            color: #1d4ed8;
+        }
+
+        .tutorial h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* CODE */
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            overflow-x: auto;
+
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* PRACTICE */
+
+        .practice {
+            background: #dbeafe;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .practice li {
+            margin: 10px 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .tutorial {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            C<span>Learn</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#practice">Practice</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Learn <span>C Programming</span>
+            </h1>
+
+            <p>
+                Learn C programming from beginner
+                to advanced with simple explanations,
+                examples and practice questions.
+            </p>
+
+            <a href="#tutorials" class="btn">
+                Start Learning
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPICS -->
+
+    <section class="container" id="tutorials">
+
+        <div class="section-title">
+
+            <h2>C Programming Topics</h2>
+
+            <p>
+                Learn step-by-step from the basics.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <a href="file:///C:/Users/sidha/OneDrive/Desktop/html%201/html1.html">
+                    <h3>01. C Basics</h3>
+                    <p>
+                        Learn syntax, program structure
+                        and your first C program.
+                    </p></a>
+                
+            </div>
+
+
+            <div class="card">
+                
+                    <h3>02. Variables</h3>
+                    <p>
+                        Learn variables and different
+                        data types.
+                    </p>
+                
+            </div>
+
+
+            <div class="card">
+                <a href="file:///C:/Users/sidha/OneDrive/Desktop/html%201/html2.html">
+                <h3>03. Operators</h3>
+                <p>
+                    Learn arithmetic, comparison
+                    and logical operators.
+                </p></a>
+            </div>
+
+
+            <div class="card">
+                <h3>04. Conditions</h3>
+                <p>
+                    Learn if, else-if, else
+                    and switch.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>05. Loops</h3>
+                <p>
+                    Learn for, while and
+                    do-while loops.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>06. Functions</h3>
+                <p>
+                    Learn how to create reusable
+                    functions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>07. Arrays</h3>
+                <p>
+                    Learn how to store multiple
+                    values.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>08. Strings</h3>
+                <p>
+                    Learn character arrays and
+                    string functions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>09. Pointers</h3>
+                <p>
+                    Understand addresses,
+                    pointers and memory.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>10. Structures</h3>
+                <p>
+                    Group different types of
+                    information.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>11. File Handling</h3>
+                <p>
+                    Learn to read and write
+                    files using C.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>12. Data Structures</h3>
+                <p>
+                    Learn linked lists, stacks,
+                    queues and trees.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BASIC TUTORIAL -->
+
+
+
+
+</body>
+
+</html>
